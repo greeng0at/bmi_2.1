@@ -22,5 +22,13 @@ namespace BMIUnitTestProject
             Assert.AreEqual(reverseBMI.DesiredWeightStones, 13);
             Assert.AreEqual(reverseBMI.DesiredWeightPounds, 4);
         }
+
+        [TestMethod]
+        public void TestTwentyFTwoBMI()
+        {
+            ReverseBMI reverseBMI = new ReverseBMI() { HeightFeet = 5, HeightInches = 5, DerisredBMI = 24 };
+            Assert.AreEqual(reverseBMI.DesiredWeightStones, 8);
+            Assert.AreEqual(reverseBMI.DesiredWeightPounds, 8);
+        }
     }
 }
