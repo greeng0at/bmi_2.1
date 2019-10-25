@@ -1,0 +1,54 @@
+﻿@page
+@model BMICalculator.Pages.ReverseBMIModel
+
+@{
+    ViewData["Title"] = "Reverse BMI Calculator";
+}
+
+<h2>Reverse BMI Calculator</h2>
+<p>Given your height and desired BMI, this program will output the weight you need to be for the desired BMI.</p>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ReverseBMI.HeightFeet" class="control-label"></label>
+                <input asp-for="ReverseBMI.HeightFeet" class="form-control" />
+                <span asp-validation-for="ReverseBMI.HeightFeet" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReverseBMI.HeightInches" class="control-label"></label>
+                <input asp-for="ReverseBMI.HeightInches" class="form-control" />
+                <span asp-validation-for="ReverseBMI.HeightInches" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReverseBMI.DerisredBMI" class="control-label"></label>
+                <input asp-for="ReverseBMI.DerisredBMI" class="form-control" />
+                <span asp-validation-for="ReverseBMI.DerisredBMI" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Calculate" class="btn btn-default" />
+            </div>
+            @if (Request.Method == "POST")
+            {
+                <div>
+                    @Html.DisplayNameFor(m => m.ReverseBMI.DesiredWeightStones)
+                    @Html.DisplayFor(m => m.ReverseBMI.DesiredWeightStones)
+                </div>
+                <div>
+                    @Html.DisplayNameFor(m => m.ReverseBMI.DesiredWeightPounds)
+                    @Html.DisplayFor(m => m.ReverseBMI.DesiredWeightPounds)
+                </div>
+            }
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+
