@@ -8,7 +8,7 @@ namespace BMIUnitTestProject
     public class ReverseBMITest
     {
         [TestMethod]
-        public void TestTwentyBMI()
+        public void TestTwentyTwoBMI()
         {
             ReverseBMI reverseBMI = new ReverseBMI() { HeightFeet = 5, HeightInches = 5, DerisredBMI = 22 };
             Assert.AreEqual(reverseBMI.DesiredWeightStones, 9);
