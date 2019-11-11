@@ -42,9 +42,10 @@ namespace UserAcceptanceTests
         {
             //this.webAppUri = testContextInstance.Properties["webAppUri"].ToString();
             //This is pulling your URL from SeleniumTest.runsettings
+            //this.webAppUri = "http://x00137344.azurewebsites.net/";
             this.webAppUri = "http://x00137344.azurewebsites.net/";
         }
-
+        /*
         [TestMethod]
         public void TestBMI()
         {
@@ -95,6 +96,6 @@ namespace UserAcceptanceTests
 
                 driver.Quit();
             }
-        }
+        }*/
     }
 }
