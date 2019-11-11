@@ -37,11 +37,11 @@
             </div>
             @if (Request.Method == "POST")
             {
-                <div>
+                <div id="bmiVal">
                     @Html.DisplayNameFor(m => m.BMI.BMIValue)
                     @Html.DisplayFor(m => m.BMI.BMIValue)
                 </div>
-                <div>
+                <div id="bmiCat">
                     @Html.DisplayNameFor(m => m.BMI.BMICategory)
                     @Html.DisplayFor(m => m.BMI.BMICategory)
                 </div>
