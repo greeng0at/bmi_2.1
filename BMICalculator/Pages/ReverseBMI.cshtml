@@ -15,29 +15,29 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="ReverseBMI.HeightFeet" class="control-label"></label>
-                <input asp-for="ReverseBMI.HeightFeet" class="form-control" />
+                <input asp-for="ReverseBMI.HeightFeet" class="form-control" id="heightFeet"/>
                 <span asp-validation-for="ReverseBMI.HeightFeet" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ReverseBMI.HeightInches" class="control-label"></label>
-                <input asp-for="ReverseBMI.HeightInches" class="form-control" />
+                <input asp-for="ReverseBMI.HeightInches" class="form-control" id="heightInches"/>
                 <span asp-validation-for="ReverseBMI.HeightInches" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ReverseBMI.DerisredBMI" class="control-label"></label>
-                <input asp-for="ReverseBMI.DerisredBMI" class="form-control" />
+                <input asp-for="ReverseBMI.DerisredBMI" class="form-control" id="desiredBmi"/>
                 <span asp-validation-for="ReverseBMI.DerisredBMI" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Calculate" class="btn btn-default" />
+                <input type="submit" value="Calculate" class="btn btn-default" id="submitButton"/>
             </div>
             @if (Request.Method == "POST")
             {
-                <div>
+                <div id="weightStone">
                     @Html.DisplayNameFor(m => m.ReverseBMI.DesiredWeightStones)
                     @Html.DisplayFor(m => m.ReverseBMI.DesiredWeightStones)
                 </div>
-                <div>
+                <div id="weightPounds">
                     @Html.DisplayNameFor(m => m.ReverseBMI.DesiredWeightPounds)
                     @Html.DisplayFor(m => m.ReverseBMI.DesiredWeightPounds)
                 </div>
