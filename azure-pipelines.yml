@@ -6,6 +6,8 @@
 trigger:
 - master
 
+pr: none
+
 pool:
   vmImage: 'windows-latest'
 
@@ -38,3 +40,5 @@ steps:
     command: test
     projects: '**/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+
+- task: PublishBuildArtifacts@1
