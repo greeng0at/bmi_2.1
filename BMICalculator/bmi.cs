@@ -1,8 +1,4 @@
-﻿// model classes for BMI calculator
-// GC
-//
-
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace BMICalculator
@@ -56,6 +52,7 @@ namespace BMICalculator
                 return bmi;
             }
         }
+
 
         // calculate BMI category 
         [Display(Name = "Your BMI Category is")]
