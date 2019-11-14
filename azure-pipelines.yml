@@ -27,8 +27,11 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '**\*.runsettings'
-    TargetFolder: '$(build.artifactstagingdirectory)'
+    Contents: |
+      **\*.runsettings
+      **\*.csproj
+      **\*.dll
+    TargetFolder: '$(build.artifactstagingdirectory)'''
 
 - task: VSBuild@1
   inputs:
