@@ -25,6 +25,14 @@ steps:
 
 - task: VisualStudioTestPlatformInstaller@1
 
+- task: CopyFiles@2
+  inputs:
+    Contents: |
+      **\*.runsettings
+      **\*.csproj
+      **\*.dll
+    TargetFolder: '$(build.artifactstagingdirectory)'
+    
 - task: VSBuild@1
   inputs:
     solution: '$(solution)'
